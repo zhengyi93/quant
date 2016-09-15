@@ -1,2 +1,3 @@
-# quant
-exploratory quant project
+# Exploratory Quant Project
+
+- Familiarizing with quantitative methods for finance
