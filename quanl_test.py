@@ -1,9 +1,10 @@
-import quandl
 import matplotlib.pyplot as plt
+from quandlDataExtract import *
 
 # FED
-data = quandl.get("FED/RXI_N_A_SI")
+fx_usd_sgd = extract("usdsgd fx")
+zero_Rates = extract("US zero rates")
 
-plt.plot([1, 2, 3, 4])
+plt.plot(fx_usd_sgd)
 
-print data
+print fx_usd_sgd
