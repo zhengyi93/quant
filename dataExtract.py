@@ -1,4 +1,5 @@
-# Quandl Data Extraction [Inference Module]
+# Data Extraction [Inference Module]
+# Currently supports a few instances of quandl imports
 # Attempts to infer call to closest match (Edit Distance)
 import quandl
 import distance

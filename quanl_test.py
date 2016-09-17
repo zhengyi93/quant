@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from quandlDataExtract import *
+from dataExtract import *
 
 # FED
 fx_usd_sgd = extract("usdsgd fx")
