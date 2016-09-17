@@ -4,16 +4,24 @@
 import quandl
 import distance
 
-# Assign appropriate keys to required data from Quandl
-# TODO: Add regex interpreter
+# List of functions to extract data
+func = {
+    "quandl": lambda x: quandl.get(x[0]),
+}
+
+# Collection of extraction methods and arguments
 Collection = {
-    "US Rates": "FED/SVENY",
-    "USD/SGD FX": "FED/RXI_N_A_SI",
+    # Each key (of type String) maps to a vector
+    # corresponding to [(function), [argument list]]
+    "US Rates": [func["quandl"], ["FED/SVENY"]],
+    "USD/SGD FX": [func["quandl"], ["FED/RXI_N_A_SI"]],
 }
 
 
+# TODO: Add regex interpreter
 def extract(inquiry):
-    return quandl.get(Collection[correction(inquiry)])
+    arg = correction(inquiry)
+    return Collection[arg][0](Collection[arg][1])
 
 
 def correction(inquiry):
