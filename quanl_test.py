@@ -10,6 +10,7 @@ google_px = extract("google")
 
 
 print zero_Rates
-print google_px
 print fx_usd_sgd
+print google_px
+
 
